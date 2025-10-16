@@ -1,13 +1,15 @@
-name: Python Tests
+name: Run Python tests
 
 on:
   push:
-    branches: [ main, master, develop ]
+    branches:
+      - '**'
   pull_request:
-    branches: [ main, master, develop ]
+    branches:
+      - '**'
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
